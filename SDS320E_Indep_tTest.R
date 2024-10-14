@@ -9,7 +9,7 @@ mydata <- read.csv("ClassSurvey.csv")
 mydata <- mydata[mydata$Text<=1000,]
 
 #Conduct the test:
-t.test(mydata$Text~mydata$Relationship, var.eq=TRUE)
+t.test(mydata$Text~mydata$Relationship)
 
 #Visual check of normality and equal variance assumptions:
 boxplot(mydata$Text~mydata$Relationship, col=c('dark green','purple'), main='Text by Relationship Status',xlab='Relationship Status',ylab='Texts Sent/Week')
